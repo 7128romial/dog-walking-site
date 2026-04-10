@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="סיפורי הצלחה של מתנדבים וכלבים - WalkMe">
+  <title>WalkMe - סיפורי הצלחה</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">דלג לתוכן הראשי</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a href="../index.html" class="navbar-brand logo-link">
+          <img src="../images/logo.jpeg" alt="WalkMe Logo" class="logo-img">
+          <span class="site-title">WalkMe</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="תפריט ניווט">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="../index.html">דף הבית</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">אודות</a></li>
+            <li class="nav-item"><a class="nav-link" href="dogs.html">רשימת כלבים</a></li>
+            <li class="nav-item"><a class="nav-link" href="tips.html">טיפים למתנדבים</a></li>
+            <li class="nav-item"><a class="nav-link active" href="stories.html">סיפורי הצלחה</a></li>
+            <li class="nav-item"><a class="nav-link" href="registration.html">הרשמה להתנדבות</a></li>
+          </ul>
+          <a class="contact-btn" href="registration.html">הצטרפו אלינו</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!--  PAGE HEADER  -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">סיפורי הצלחה</h1>
+      <p class="page-subtitle">בחרו קטגוריה ולחצו על סיפור לקריאה</p>
+    </div>
+  </header>
+
+  <!--  MAIN  -->
+  <main id="main">
+
+    <!-- SECTION 1: Filter + Grid + Panel -->
+    <section class="stories-section">
+      <div class="container">
+
+        <!-- Filter buttons -->
+        <div class="story-filters">
+          <button class="story-filter-btn active" data-filter="all">הכל</button>
+          <button class="story-filter-btn" data-filter="adoption">אימוץ</button>
+          <button class="story-filter-btn" data-filter="rehab">שיקום</button>
+          <button class="story-filter-btn" data-filter="education">חינוך</button>
+          <button class="story-filter-btn" data-filter="friendship">חברות</button>
+        </div>
+
+        <!-- Counter -->
+        <p id="storiesCounter" class="stories-counter"></p>
+
+        <!-- Story tiles -->
+        <div class="row" id="storiesGrid">
+
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="story-tile" data-story="rocky" data-category="adoption">
+              <span class="story-tag story-tag-adoption">אימוץ</span>
+              <h3>רוקי</h3>
+              <p>משפחת כהן אימצה אותו אחרי 3 חודשי התנדבות.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="story-tile" data-story="luna" data-category="friendship">
+              <span class="story-tag story-tag-friendship">חברות</span>
+              <h3>לונה</h3>
+              <p>ילדה בת 8 שגדלה עם לונה כחברה הכי טובה.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="story-tile" data-story="max" data-category="friendship">
+              <span class="story-tag story-tag-friendship">חברות</span>
+              <h3>מקס</h3>
+              <p>מתנדב בן 70 שמצא חברות אמיתית בטיולים עם מקס.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="story-tile" data-story="bella" data-category="rehab">
+              <span class="story-tag story-tag-rehab">שיקום</span>
+              <h3>בלה</h3>
+              <p>בלה עברה טראומה וההתנדבויות עזרו לה להחלים.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="story-tile" data-story="cooper" data-category="education">
+              <span class="story-tag story-tag-education">חינוך</span>
+              <h3>קופר</h3>
+              <p>קופר לימד קבוצת ילדים על אחריות ואהבה לבעלי חיים.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="story-tile" data-story="daisy" data-category="friendship">
+              <span class="story-tag story-tag-friendship">חברות</span>
+              <h3>דייזי</h3>
+              <p>דייזי ומתנדבת בשם מיה יצאו לאלף טיולים ביחד.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Story panel - hidden by default -->
+        <div id="storyPanel" style="display:none;">
+          <h2 id="storyTitle"></h2>
+          <p id="storyText"></p>
+          <button id="closeStory">סגור</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: CTA - leads user to register after reading stories -->
+    <section class="cta-section">
+      <div class="container">
+        <h2 class="cta-title">רוצים להיות הסיפור הבא?</h2>
+        <p class="cta-text">ראיתם שזה עובד. הצטרפו לקהילת המתנדבים שלנו וצרו סיפור הצלחה משלכם.</p>
+        <div class="cta-buttons">
+          <a href="registration.html" class="btn btn-white">הרשמה להתנדבות</a>
+          <a href="dogs.html" class="btn btn-secondary">הכירו את הכלבים</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+          <h4 class="footer-heading">אודות WalkMe</h4>
+          <p class="footer-text">מערכת לניהול התנדבויות עבור עמותת "חברים על ארבע".</p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+          <h4 class="footer-heading">קישורים</h4>
+          <nav aria-label="ניווט תחתון">
+            <ul class="footer-links">
+              <li><a href="../index.html">דף הבית</a></li>
+              <li><a href="about.html">אודות</a></li>
+              <li><a href="dogs.html">רשימת כלבים</a></li>
+              <li><a href="tips.html">טיפים</a></li>
+              <li><a href="stories.html">סיפורי הצלחה</a></li>
+              <li><a href="registration.html">הרשמה</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+          <h4 class="footer-heading">צור קשר</h4>
+          <address class="footer-contact">
+            <p>אימייל: <a href="mailto:info@walkme.co.il">info@walkme.co.il</a></p>
+            <p>טלפון: 050-1234567</p>
+            <p>כתובת: פתח תקווה, ישראל</p>
+          </address>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+          <h4 class="footer-heading">עקבו אחרינו</h4>
+          <div class="social-links">
+            <a href="#" class="social-link social-link-disabled" title="בקרוב">Facebook</a>
+            <a href="#" class="social-link social-link-disabled" title="בקרוב">Instagram</a>
+            <a href="#" class="social-link social-link-disabled" title="בקרוב">YouTube</a>
+          </div>
+          <p class="social-coming-soon">בקרוב</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 WalkMe. כל הזכויות שמורות.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="../js/stories.js"></script>
+</body>
+</html>

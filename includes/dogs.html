@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="רשימת הכלבים הזמינים להתנדבות בעמותת חברים על ארבע">
+  <title>WalkMe - רשימת כלבים</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">דלג לתוכן הראשי</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a href="../index.html" class="navbar-brand logo-link">
+          <img src="../images/logo.jpeg" alt="WalkMe Logo" class="logo-img">
+          <span class="site-title">WalkMe</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="תפריט ניווט">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="../index.html">דף הבית</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">אודות</a></li>
+            <li class="nav-item"><a class="nav-link active" href="dogs.html">רשימת כלבים</a></li>
+            <li class="nav-item"><a class="nav-link" href="tips.html">טיפים למתנדבים</a></li>
+            <li class="nav-item"><a class="nav-link" href="stories.html">סיפורי הצלחה</a></li>
+            <li class="nav-item"><a class="nav-link" href="registration.html">הרשמה להתנדבות</a></li>
+          </ul>
+          <a class="contact-btn" href="registration.html">הצטרפו אלינו</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============ MAIN ============ -->
+  <main id="main">
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title">רשימת הכלבים</h1>
+        <p class="page-subtitle">בחרו כלב והצטרפו אלינו להתנדבות משמעותית</p>
+        <!-- JS: Welcome message from homepage -->
+        <p id="welcomeMsg" class="welcome-msg" style="display:none;"></p>
+      </div>
+    </section>
+
+    <!-- Dogs Section -->
+    <section class="dogs-section">
+      <div class="container">
+        
+        <!-- Filter Section -->
+        <div class="filter-section">
+          <div class="row align-items-end">
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-2">
+              <label for="sizeFilter">גודל</label>
+              <select id="sizeFilter" class="form-select">
+                <option value="">כל הגדלים</option>
+                <option value="small">קטן</option>
+                <option value="medium">בינוני</option>
+                <option value="large">גדול</option>
+              </select>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-2">
+              <label for="ageFilter">גיל</label>
+              <select id="ageFilter" class="form-select">
+                <option value="">כל הגילאים</option>
+                <option value="puppy">גור (עד שנה)</option>
+                <option value="young">צעיר (1-3)</option>
+                <option value="adult">בוגר (3-7)</option>
+                <option value="senior">מבוגר (7+)</option>
+              </select>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-12 mb-2">
+              <label for="energyFilter">רמת אנרגיה</label>
+              <select id="energyFilter" class="form-select">
+                <option value="">כל הרמות</option>
+                <option value="low">נמוכה</option>
+                <option value="medium">בינונית</option>
+                <option value="high">גבוהה</option>
+              </select>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-6 mb-2">
+              <button id="filterBtn" class="btn btn-primary w-100">סנן</button>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-6 mb-2">
+              <button id="resetFilter" class="btn btn-secondary w-100">אפס סינון</button>
+            </div>
+          </div>
+          <!-- JS: Filter feedback written dynamically -->
+          <div id="filterFeedback"></div>
+        </div>
+
+        <!-- Dogs Grid -->
+        <div class="row" id="dogsGrid">
+          
+          <!-- Dog Card 1 - חומי -->
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4 dog-col" data-size="medium" data-age="adult" data-energy="high">
+            <article class="dog-card" data-id="1" data-name="חומי">
+              <img src="../images/dog-homi.jpg" alt="חומי - גולדן רטריבר" loading="lazy">
+              <div class="dog-card-content">
+                <h3>חומי</h3>
+                <div class="dog-info">
+                  <span class="dog-tag">גולדן רטריבר</span>
+                  <span class="dog-tag">4 שנים</span>
+                  <span class="dog-tag">בינוני</span>
+                </div>
+                <p>כלב חברותי ואוהב אנשים. נהדר לטיולים ארוכים ומשחקי אפורט.</p>
+                <a href="dog-details.html?id=1" class="btn btn-primary">פרטים נוספים</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Dog Card 2 - לונה -->
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4 dog-col" data-size="small" data-age="young" data-energy="high">
+            <article class="dog-card coming-soon-card" data-id="2" data-name="לונה">
+              <img src="../images/dog-luna.jpg" alt="לונה - בורדר קולי" loading="lazy">
+              <div class="dog-card-content">
+                <h3>לונה</h3>
+                <div class="dog-info">
+                  <span class="dog-tag">בורדר קולי</span>
+                  <span class="dog-tag">2 שנים</span>
+                  <span class="dog-tag">קטן</span>
+                </div>
+                <p>כלבה אנרגטית וחכמה. אוהבת לרוץ ולשחק משחקי חשיבה.</p>
+                <button class="btn btn-primary" disabled title="בקרוב">פרטים נוספים</button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Dog Card 3 - מקס -->
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4 dog-col" data-size="large" data-age="senior" data-energy="low">
+            <article class="dog-card coming-soon-card" data-id="3" data-name="מקס">
+              <img src="../images/dog-max.jpg" alt="מקס - לברדור" loading="lazy">
+              <div class="dog-card-content">
+                <h3>מקס</h3>
+                <div class="dog-info">
+                  <span class="dog-tag">לברדור</span>
+                  <span class="dog-tag">8 שנים</span>
+                  <span class="dog-tag">גדול</span>
+                </div>
+                <p>כלב רגוע ונעים הליכות. מתאים לטיולים קצרים ולחיבוקים.</p>
+                <button class="btn btn-primary" disabled title="בקרוב">פרטים נוספים</button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Dog Card 4 - בלה -->
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4 dog-col" data-size="small" data-age="puppy" data-energy="high">
+            <article class="dog-card coming-soon-card" data-id="4" data-name="בלה">
+              <img src="../images/dog-bella.jpg" alt="בלה - ביגל" loading="lazy">
+              <div class="dog-card-content">
+                <h3>בלה</h3>
+                <div class="dog-info">
+                  <span class="dog-tag">ביגל</span>
+                  <span class="dog-tag">8 חודשים</span>
+                  <span class="dog-tag">קטן</span>
+                </div>
+                <p>גורה שובבה וסקרנית. אוהבת להריח ולחקור את הסביבה.</p>
+                <button class="btn btn-primary" disabled title="בקרוב">פרטים נוספים</button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Dog Card 5 - רוקי -->
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4 dog-col" data-size="large" data-age="adult" data-energy="medium">
+            <article class="dog-card coming-soon-card" data-id="5" data-name="רוקי">
+              <img src="../images/dog-rocky.jpg" alt="רוקי - האסקי" loading="lazy">
+              <div class="dog-card-content">
+                <h3>רוקי</h3>
+                <div class="dog-info">
+                  <span class="dog-tag">האסקי</span>
+                  <span class="dog-tag">5 שנים</span>
+                  <span class="dog-tag">גדול</span>
+                </div>
+                <p>כלב יפהפה עם עיניים כחולות. אוהב טיולים ומשפחות.</p>
+                <button class="btn btn-primary" disabled title="בקרוב">פרטים נוספים</button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Dog Card 6 - ג'קי -->
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4 dog-col" data-size="medium" data-age="young" data-energy="medium">
+            <article class="dog-card coming-soon-card" data-id="6" data-name="ג'קי">
+              <img src="../images/dog-jackie.jpg" alt="ג'קי - תחש" loading="lazy">
+              <div class="dog-card-content">
+                <h3>ג'קי</h3>
+                <div class="dog-info">
+                  <span class="dog-tag">תחש</span>
+                  <span class="dog-tag">3 שנים</span>
+                  <span class="dog-tag">בינוני</span>
+                </div>
+                <p>כלב נאמן ואוהב. מסתדר טוב עם ילדים וכלבים אחרים.</p>
+                <button class="btn btn-primary" disabled title="בקרוב">פרטים נוספים</button>
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+        <!-- No Results Message -->
+        <div id="noResults" class="no-results" style="display: none;">
+          <h3>לא נמצאו כלבים</h3>
+          <p>נסו לשנות את הסינון או לאפס אותו</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+          <h4 class="footer-heading">אודות WalkMe</h4>
+          <p class="footer-text">מערכת לניהול התנדבויות עבור עמותת "חברים על ארבע".</p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+          <h4 class="footer-heading">קישורים</h4>
+          <nav aria-label="ניווט תחתון">
+            <ul class="footer-links">
+              <li><a href="../index.html">דף הבית</a></li>
+              <li><a href="dogs.html">רשימת כלבים</a></li>
+              <li><a href="tips.html">טיפים</a></li>
+              <li><a href="stories.html">סיפורי הצלחה</a></li>
+              <li><a href="about.html">אודות</a></li>
+              <li><a href="registration.html">הרשמה</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+          <h4 class="footer-heading">צור קשר</h4>
+          <address class="footer-contact">
+            <p>אימייל: <a href="mailto:info@walkme.co.il">info@walkme.co.il</a></p>
+            <p>טלפון: 050-1234567</p>
+            <p>כתובת: פתח תקווה, ישראל</p>
+          </address>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+          <h4 class="footer-heading">עקבו אחרינו</h4>
+          <div class="social-links">
+            <a href="#" class="social-link social-link-disabled" title="בקרוב">Facebook</a>
+            <a href="#" class="social-link social-link-disabled" title="בקרוב">Instagram</a>
+            <a href="#" class="social-link social-link-disabled" title="בקרוב">YouTube</a>
+          </div>
+          <p class="social-coming-soon">בקרוב</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 WalkMe. כל הזכויות שמורות.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/dogs.js"></script>
+</body>
+</html>

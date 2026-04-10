@@ -1,0 +1,2004 @@
+/* ===============================================
+WalkMe - Main Stylesheet
+   =============================================== */
+
+/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { height: 100%; }
+body {
+  height: 100%;
+  min-height: 100%;
+  font-family: 'Rubik', 'Segoe UI', Tahoma, sans-serif;
+  line-height: 1.6;
+  color: #1a1a2e;
+  background: #f5f7fa;
+}
+
+/* Accessibility */
+.skip-link {
+  position: absolute; top: -100px; right: 10px; padding: 12px 20px;
+  background: #16213e; color: #fff; text-decoration: none; border-radius: 8px;
+}
+.skip-link:focus { top: 10px; }
+
+/* Container */
+.container { width: 94%; max-width: 1200px; margin: 0 auto; }
+
+/*HEADER NAV BAR*/
+.site-header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #16213e;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.site-header .navbar {
+  padding: 12px 0;
+}
+
+.logo-link { display: inline-block; vertical-align: middle; text-decoration: none; }
+.logo-img { width: 45px; height: 45px; border-radius: 50%; border: 2px solid #fff; }
+.site-title {
+  font-size: 24px; font-weight: 700; color: #ffffff !important;
+}
+
+.navbar-nav {
+  gap: 6px;
+}
+
+.nav-link {
+  color: #e2e8f0 !important;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #60a5fa !important;
+}
+
+.nav-link.active {
+  background-color: rgba(96, 165, 250, 0.2);
+  color: #60a5fa !important;
+}
+
+.contact-btn {
+  background-color: #60a5fa;
+  color: #16213e !important;
+  font-weight: 700;
+  text-align: center;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.contact-btn:hover {
+  background-color: #93c5fd;
+  color: #16213e !important;
+}
+
+/* Navbar toggler custom style */
+.navbar-toggler {
+  border-color: rgba(255,255,255,0.3);
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.3);
+}
+
+/* ============================================================
+   About page styles
+   ============================================================ */
+
+/* --- Hero Section --- */
+.about-hero {
+  background: #16213e;
+  color: #fff;
+  padding: 80px 0 70px;
+}
+
+.about-hero-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.about-hero-desc {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+
+.about-hero-img {
+  width: 100%;
+  max-width: 420px;
+  height: 280px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+/* --- Content Section --- */
+.about-content-section {
+  padding: 50px 0;
+  background: #f5f7fa;
+}
+
+/* --- About Cards --- */
+.about-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 36px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  height: 100%;
+}
+
+.about-sub-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #16213e;
+  margin-top: 28px;
+  margin-bottom: 14px;
+}
+
+/* --- Goals List --- */
+.about-goals-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-goals-list li {
+  padding: 11px 0;
+  padding-right: 12px;
+  border-bottom: 1px solid #f1f5f9;
+  border-right: 4px solid #60a5fa;
+  font-size: 1rem;
+  color: #374151;
+  position: relative;
+}
+
+.about-goals-list li:last-child {
+  border-bottom: none;
+}
+
+/* --- Stats Bar --- */
+.about-stats-bar {
+  background: #0f4c75;
+  padding: 40px 0;
+  color: #fff;
+}
+
+.stats-bar-title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.stats-bar-item {
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.stats-bar-number {
+  display: block;
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #60a5fa;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stats-bar-label {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+/* --- Values Section --- */
+.about-values-section {
+  padding: 60px 0;
+  background: #f5f7fa;
+}
+
+.value-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 28px 22px;
+  height: 100%;
+  text-align: center;
+}
+
+.value-card:hover {
+  background-color: #dbeafe;
+  box-shadow: 0 8px 24px rgba(30, 64, 175, 0.1);
+}
+
+.value-icon-circle {
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  background: #16213e;
+  color: #60a5fa;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto 14px;
+}
+
+.value-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #16213e;
+  margin-bottom: 8px;
+}
+
+.value-text {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+/* --- Team Section --- */
+.about-team-section {
+  padding: 60px 0;
+  background: #fff;
+}
+
+.team-card {
+  background: #f8faff;
+  border: 2px solid transparent;
+  border-radius: 14px;
+  padding: 24px 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.team-card:hover {
+  background-color: #dbeafe;
+  box-shadow: 0 8px 24px rgba(30, 64, 175, 0.12);
+}
+
+/* JS adds this class */
+.team-card.active {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.25);
+  background: #eff6ff;
+}
+
+.team-avatar {
+  width: 80px;
+  height: 80px;
+  line-height: 74px;
+  background: #16213e;
+  color: #60a5fa;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto 14px;
+  border: 3px solid rgba(96, 165, 250, 0.3);
+}
+
+.team-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #16213e;
+  margin-bottom: 4px;
+}
+
+.team-role {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.team-more-info {
+  font-size: 0.75rem;
+  color: #60a5fa;
+  font-weight: 600;
+  display: block;
+}
+
+/* --- Bio Panel --- */
+.bio-panel {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 12px;
+  padding: 22px 50px 22px 22px;
+  margin-bottom: 30px;
+  position: relative;
+  line-height: 1.7;
+  font-size: 1rem;
+  color: #1e3a5f;
+}
+
+.bio-close {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #6b7280;
+  padding: 4px 6px;
+  border-radius: 6px;
+}
+
+.bio-close:hover {
+  background: #dbeafe;
+  color: #16213e;
+}
+
+.bio-text {
+  margin-bottom: 0;
+}
+
+/* --- Contact & Hours Section --- */
+.about-contact-section {
+  padding: 50px 0;
+  background: #f5f7fa;
+}
+
+.contact-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  border-top: 4px solid #60a5fa;
+  height: 100%;
+  font-style: normal;
+}
+
+.contact-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #16213e;
+  margin-bottom: 20px;
+}
+
+/* --- Hours List --- */
+.hours-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hours-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.95rem;
+}
+
+.hours-list li:last-child {
+  border-bottom: none;
+}
+
+.hours-day {
+  color: #6b7280;
+}
+
+.text-danger-custom {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+/* --- Address / Contact --- */
+.contact-line {
+  font-size: 0.95rem;
+  color: #374151;
+  margin-bottom: 12px;
+  font-style: normal;
+}
+
+.contact-line a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.contact-line a:hover {
+  text-decoration: underline;
+}
+
+/* --- Location Map (inside contact section) --- */
+
+.map-container {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 400px;
+  border: 0;
+  border-radius: 12px;
+  display: block;
+}
+
+/* No results message on dogs page */
+.no-results {
+  text-align: center;
+  padding: 60px;
+  background: #fff;
+  border-radius: 16px;
+}
+
+/* Required field marker (registration form) */
+.required-mark {
+  color: #ef4444;
+}
+
+.map-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 16px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  max-width: 300px;
+}
+
+.map-address {
+  color: #16213e;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.map-address strong {
+  font-weight: 700;
+  color: #16213e;
+}
+
+.map-address small {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Collapsed menu styles (below 992px) */
+@media screen and (max-width: 991px) {
+  .navbar-collapse {
+    padding-top: 16px;
+  }
+
+  .navbar-nav {
+    gap: 4px;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 12px 16px;
+  }
+
+  .contact-btn {
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+    padding: 12px 20px;
+  }
+
+  /* About page responsive */
+  .about-hero {
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  .about-hero-img {
+    max-width: 360px;
+    height: 220px;
+    margin-top: 20px;
+  }
+
+  /* Map responsive */
+  .map-container iframe {
+    height: 300px;
+  }
+
+  .map-overlay {
+    bottom: 15px;
+    left: 15px;
+    padding: 12px 16px;
+    max-width: 250px;
+  }
+}
+
+/* ===============================================
+   Main Sections
+   =============================================== */
+.site-main { padding: 40px 0; min-height: 100%; }
+
+/* Welcome Section */
+.welcome-section { padding: 20px 0 40px; }
+/* Bootstrap handles the grid layout */
+.welcome-content { background: #fff; border-radius: 20px; padding: 40px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+.welcome-title { font-size: 42px; font-weight: 800; color: #16213e; line-height: 1.2; margin-bottom: 16px; }
+.welcome-description { font-size: 18px; color: #4b5563; margin-bottom: 28px; }
+mark { background-color: #dbeafe; color: #16213e; padding: 0 6px; border-radius: 4px; font-weight: 700; }
+
+/* Stats */
+.stat-card { background: #eff6ff; border-radius: 12px; padding: 20px; text-align: center; }
+.stat-number { font-size: 28px; font-weight: 800; color: #1e40af; }
+.stat-label { font-size: 12px; color: #6b7280; font-weight: 500; }
+
+.image-wrapper { background: #fff; border-radius: 20px; padding: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+.main-image { width: 100%; height: 400px; border-radius: 16px; }
+.image-caption { margin-top: 12px; font-size: 14px; color: #6b7280; text-align: center; font-style: italic; }
+
+/* Page Header */
+.page-header {
+  text-align: center;
+  padding: 40px 0;
+  background: #16213e;
+  color: #fff;
+  margin-bottom: 40px;
+  border-radius: 0 0 24px 24px;
+}
+
+.page-title {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.page-subtitle {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+.btn-primary { background: #16213e; color: #fff; }
+.btn-secondary { background: #f3f4f6; color: #16213e; border: 2px solid #e5e7eb; }
+.btn-success { background: #059669; color: #fff; }
+.btn:hover { background-color: #dbeafe; }
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #16213e;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.section-description {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+/* ===============================================
+   DOGS GRID
+   =============================================== */
+.dogs-section { padding: 20px 0; }
+
+.dogs-grid {
+  /* Bootstrap row/col handles the grid */
+  padding: 20px 0;
+}
+
+.dog-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.dog-card:hover {
+  background-color: #dbeafe;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+}
+
+.dog-card img {
+  width: 100%;
+  height: 220px;
+}
+
+.dog-card-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.dog-card h3 {
+  font-size: 22px;
+  color: #16213e;
+  margin-bottom: 8px;
+}
+
+.dog-card .dog-info {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.dog-tag {
+  background: #eff6ff;
+  color: #1e40af;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.dog-card p {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.dog-card .btn {
+  width: 100%;
+  justify-content: center;
+  margin-top: auto;
+}
+
+/* Filter Section */
+.filter-section {
+  background: #fff;
+  padding: 24px;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.filter-row {
+  /* Bootstrap row/col handles layout */
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-group label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 14px;
+}
+
+.filter-group select,
+.filter-group input {
+  padding: 10px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 15px;
+  width: 180px;
+}
+
+.filter-group select:focus,
+.filter-group input:focus {
+  border-color: #60a5fa;
+  outline: none;
+}
+
+/* ===============================================
+   DOG DETAILS PAGE
+   =============================================== */
+.dog-details-section {
+  padding: 40px 0;
+}
+
+.dog-details-grid {
+  /* Bootstrap row/col handles layout */
+  align-items: start;
+}
+
+.dog-gallery img {
+  width: 100%;
+  height: 400px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.dog-info-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.dog-info-card h1 {
+  font-size: 36px;
+  color: #16213e;
+  margin-bottom: 20px;
+}
+
+.dog-specs {
+  /* Bootstrap row/col handles layout */
+  margin-bottom: 24px;
+}
+
+.spec-item {
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.spec-item .label {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+.spec-item .value {
+  font-size: 18px;
+  font-weight: 600;
+  color: #16213e;
+}
+
+.dog-description {
+  color: #4b5563;
+  margin-bottom: 24px;
+  line-height: 1.8;
+}
+
+.dog-traits {
+  display: block;
+  margin-bottom: 24px;
+}
+
+.trait-tag {
+  background: #eff6ff;
+  color: #1e40af;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ===============================================
+REGISTRATION FORM
+   =============================================== */
+.form-section {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.form-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.form-card h2 {
+  font-size: 28px;
+  color: #16213e;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.form-card .form-subtitle {
+  color: #6b7280;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.selected-dog-info {
+  background: #eff6ff;
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  display: none;
+}
+
+.selected-dog-info.show {
+  display: block;
+}
+
+.selected-dog-info p {
+  margin: 0;
+  color: #1e40af;
+  font-weight: 500;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.form-group label .required {
+  color: #ef4444;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #60a5fa;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+}
+
+.form-group textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.form-group .error-message {
+  color: #ef4444;
+  font-size: 13px;
+  margin-top: 6px;
+  display: none;
+}
+
+.form-group.error input,
+.form-group.error select {
+  border-color: #ef4444;
+}
+
+.form-group.error .error-message {
+  display: block;
+}
+
+.form-group.success input {
+  border-color: #10b981;
+}
+
+.form-actions {
+  margin-top: 30px;
+}
+
+.form-actions .btn {
+  flex: 1;
+  justify-content: center;
+  padding: 16px;
+}
+
+/* Success Message */
+.success-message {
+  display: none;
+  text-align: center;
+  padding: 40px;
+}
+
+.success-message.show {
+  display: block;
+}
+
+.success-message .icon {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #059669;
+}
+
+.success-message h3 {
+  font-size: 28px;
+  color: #059669;
+  margin-bottom: 12px;
+}
+
+.success-message p {
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+/* ===============================================
+TIPS PAGE
+   =============================================== */
+.tips-section {
+  padding: 40px 0;
+}
+
+.tip-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border-right: 4px solid #0f4c75;
+}
+
+.tip-card:hover {
+  background-color: #dbeafe;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.tip-card .tip-icon {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #16213e;
+}
+
+.tip-card h3 {
+  font-size: 20px;
+  color: #16213e;
+  margin-bottom: 12px;
+}
+
+.tip-card p {
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+.tip-card ul {
+  color: #4b5563;
+  margin-top: 12px;
+  padding-right: 20px;
+}
+
+.tip-card li {
+  margin-bottom: 8px;
+}
+
+/* Video Section */
+.video-section {
+  padding: 60px 0;
+  background: #fff;
+  margin: 40px 0;
+  border-radius: 24px;
+  text-align: center;
+}
+
+.video-container { max-width: 900px; margin: 20px auto 0; }
+.video-player { width: 100%; height: 500px; border-radius: 12px; background: #000; }
+.video-player-detail { height: 400px; }
+.video-caption { margin-top: 12px; font-size: 14px; color: #6b7280; }
+
+/* Steps */
+.how-it-works { padding: 60px 0; text-align: center; }
+.steps-grid { margin-top: 40px; text-align: right; list-style: none; padding: 0; }
+.step-card { background: #fff; border-radius: 16px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border: 1px solid transparent; height: 100%; display: flex; flex-direction: column; }
+.step-card:hover { background-color: #dbeafe; }
+.step-number { width: 40px; height: 40px; line-height: 40px; background: #0f4c75; color: #fff; border-radius: 50%; text-align: center; font-weight: 700; margin-bottom: 10px; }
+.step-title { font-size: 18px; margin-bottom: 8px; }
+.step-link { color: #0f4c75; font-weight: 600; text-decoration: none; }
+
+/* Quick Access */
+.quick-access { padding: 60px 0; background: #eff6ff; margin: 40px 0; border-radius: 24px; text-align: center; }
+.quick-cards { /* Bootstrap handles grid */ }
+.quick-card { background: #fff; border-radius: 16px; padding: 32px; text-decoration: none; color: inherit; box-shadow: 0 2px 12px rgba(0,0,0,0.08); border: 1px solid transparent; text-align: right; display: flex; flex-direction: column; height: 100%; }
+.quick-card:hover { background-color: #dbeafe; }
+.quick-icon { font-size: 40px; margin-bottom: 10px; }
+.quick-title { font-size: 18px; font-weight: 700; color: #16213e; margin-bottom: 8px; }
+.quick-desc { color: #6b7280; font-size: 14px; }
+.quick-arrow { margin-top: auto; color: #0f4c75; font-size: 24px; }
+
+/* Testimonials */
+.testimonials { padding: 60px 0; text-align: center; }
+.testimonials-grid { margin-top: 40px; text-align: right; }
+.testimonial-card { background: #fff; border-radius: 16px; padding: 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-right: 4px solid #0f4c75; height: 100%; display: flex; flex-direction: column; text-align: right; position: relative; }
+.testimonial-quote { font-style: italic; color: #4b5563; margin-bottom: 16px; line-height: 1.7; padding-top: 10px; }
+.testimonial-card footer { margin-top: auto; }
+.testimonial-detail { display: block; font-size: 0.85rem; color: #6b7280; margin-top: 4px; }
+
+/* Stories Page - Carousel */
+.stories-section { padding: 50px 0; }
+
+/* Filter Buttons */
+.story-filters {
+  display: block;
+  margin-bottom: 36px;
+}
+.story-filter-btn {
+  background: #f3f4f6;
+  border: 2px solid transparent;
+  border-radius: 24px;
+  padding: 8px 22px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #4b5563;
+  cursor: pointer;
+  font-family: 'Rubik', sans-serif;
+}
+.story-filter-btn:hover {
+  background: #e5e7eb;
+  color: #16213e;
+}
+.story-filter-btn.active {
+  background: #16213e;
+  color: #fff;
+  border-color: #16213e;
+}
+
+/* Carousel Container */
+.stories-carousel {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+/* Carousel Track */
+.stories-carousel-track {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Carousel Cards */
+.story-carousel-card {
+  display: none;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  border: 1px solid transparent;
+}
+.story-carousel-card.carousel-active {
+  position: relative;
+  opacity: 1;
+}
+.story-carousel-card.carousel-prev,
+.story-carousel-card.carousel-next {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Card Image */
+.story-carousel-img {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+.story-carousel-img img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Card Body */
+.story-carousel-body {
+  padding: 28px 32px;
+}
+.story-carousel-body h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #16213e;
+  margin-bottom: 8px;
+}
+.story-meta {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+.story-carousel-body p {
+  color: #4b5563;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+/* Carousel Arrows */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  background: #fff;
+  border: 2px solid #e5e7eb;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  line-height: 40px;
+  font-size: 1.6rem;
+  color: #16213e;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.carousel-arrow:hover {
+  background: #16213e;
+  color: #fff;
+  border-color: #16213e;
+}
+.carousel-arrow-right { right: -6px; }
+.carousel-arrow-left { left: -6px; }
+
+/* Carousel Dots */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #c0c5ce;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+.carousel-dot:hover {
+  border-color: #16213e;
+}
+.carousel-dot.active {
+  background: #16213e;
+  border-color: #16213e;
+}
+
+/* Carousel responsive */
+@media (max-width: 576px) {
+  .stories-carousel { padding: 0 40px; }
+  .carousel-arrow { width: 36px; height: 36px; font-size: 1.3rem; }
+  .carousel-arrow-right { right: -2px; }
+  .carousel-arrow-left { left: -2px; }
+  .story-carousel-img { height: 200px; }
+  .story-carousel-body { padding: 20px; }
+  .story-carousel-body h2 { font-size: 1.15rem; }
+}
+
+/* Aside (Notice Board) */
+.additional-info { background-color: #16213e; color: #fff; padding: 50px 0; margin-top: 40px; border-radius: 24px 24px 0 0; }
+.info-title { text-align: center; font-size: 32px; margin-bottom: 30px; color: #60a5fa; }
+.info-grid { /* Bootstrap handles grid */ }
+.info-item { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 12px; border-right: 4px solid #60a5fa; height: 100%; display: flex; flex-direction: column; }
+.info-item:hover { background-color: #dbeafe; }
+.info-subtitle { font-size: 20px; font-weight: bold; margin-bottom: 10px; }
+.info-item p { color: #e5e7eb; font-size: 15px; }
+
+/* ===============================================
+   FOOTER
+   =============================================== */
+.site-footer {
+  background: #1a1a2e;
+  color: #e5e7eb;
+  padding: 40px 0 10px;
+}
+
+.footer-grid {
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-heading { color: #fff; font-size: 18px; margin-bottom: 15px; }
+.footer-text { font-size: 14px; color: #9ca3af; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; padding: 0; }
+.footer-links a { color: #d1d5db; text-decoration: none; border: 1px solid transparent; }
+.footer-links a:hover { color: #fff; text-decoration: underline; }
+
+.footer-contact p { margin-bottom: 8px; }
+.footer-contact a { color: #60a5fa; text-decoration: none; }
+
+.social-links { display: block; margin-bottom: 10px; }
+.social-link {
+  padding: 6px 14px;
+  background: rgba(255,255,255,0.1);
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid transparent;
+  font-size: 13px;
+}
+.social-link:hover { background-color: #dbeafe; }
+.social-link-disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.social-coming-soon {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 8px;
+}
+
+.footer-bottom { text-align: center; padding-top: 20px; font-size: 13px; color: #9ca3af; }
+
+/* ===============================================
+   Animations (jQuery)
+   =============================================== */
+.fade-in {
+  opacity: 0.4;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+/* ===============================================
+   Responsive Design
+   =============================================== */
+/* Bootstrap row/col handles responsive grid layout */
+
+/* ===============================================
+   Tips Page Specific Styles
+   =============================================== */
+/* Emergency Section */
+.emergency-section { background: #fef2f2; margin-top: 60px; }
+.emergency-title { color: #dc2626; }
+.emergency-grid { margin-top: 30px; }
+.emergency-card { background: #fff; padding: 24px 40px; border-radius: 12px; text-align: center; border: 2px solid #fecaca; height: 100%; }
+.emergency-icon { font-size: 18px; font-weight: bold; margin-bottom: 8px; color: #dc2626; }
+.emergency-label { font-weight: 700; color: #dc2626; }
+.emergency-number { font-size: 24px; font-weight: 800; }
+
+/* CTA Section */
+.cta-section { text-align: center; margin-top: 60px; padding: 60px; background: #16213e; border-radius: 24px; color: #fff; }
+.cta-title { font-size: 32px; margin-bottom: 16px; }
+.cta-text { font-size: 18px; opacity: 0.9; margin-bottom: 30px; }
+.cta-buttons { display: block; margin-bottom: 10px; }
+.btn-white { background: #fff; color: #16213e; }
+.btn-white:hover { background-color: #dbeafe; }
+
+/* Quick Match Section (Homepage) */
+.quick-match-section {
+  background: #eff6ff;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+.quick-match-section label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #16213e;
+}
+.match-options {
+  display: block;
+  margin-bottom: 10px;
+}
+.match-btn {
+  padding: 12px 24px;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 16px;
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 600;
+}
+.match-btn:hover {
+  border-color: #60a5fa;
+  background: #dbeafe;
+}
+.match-btn.selected {
+  border-color: #1e40af;
+  background: #1e40af;
+  color: #fff;
+}
+.match-feedback {
+  margin-top: 12px;
+  font-weight: 600;
+  color: #059669;
+  height: 24px;
+}
+
+/* Welcome message on dogs page */
+.welcome-msg {
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: 700;
+}
+.auto-filter-msg {
+  background: #eff6ff;
+  padding: 14px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  color: #1e40af;
+  font-weight: 600;
+  text-align: center;
+}
+
+.dog-card-hover { box-shadow: 0 16px 40px rgba(0,0,0,0.2) !important; }
+
+/* Coming Soon Cards - Not yet implemented dogs */
+.coming-soon-card {
+  opacity: 0.7;
+  position: relative;
+}
+
+.coming-soon-card:hover {
+  opacity: 0.85;
+  background-color: #dbeafe;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.coming-soon-hover {
+  cursor: not-allowed !important;
+}
+
+.coming-soon-card .btn:disabled {
+  background-color: #9ca3af !important;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.trait-hover { background: #1e40af !important; color: #fff !important; }
+
+/* ===============================================
+   RESPONSIVE DESIGN - Media Queries
+   =============================================== */
+
+/* ---- טאבלט רחב (עד 1024px) ---- */
+@media screen and (max-width: 1024px) {
+  .page-title {
+    font-size: 34px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .welcome-content {
+    padding: 30px;
+  }
+
+  .main-image {
+    height: 300px;
+  }
+
+  .video-player {
+    height: 400px;
+  }
+
+  .cta-section {
+    padding: 40px 20px;
+  }
+
+  .cta-title {
+    font-size: 26px;
+  }
+
+  .dog-gallery img {
+    height: 300px;
+  }
+
+  .dog-info-card h1 {
+    font-size: 28px;
+  }
+}
+
+/* ---- טאבלט (עד 768px) ---- */
+@media screen and (max-width: 768px) {
+  /* Page Header */
+  .page-title {
+    font-size: 28px;
+  }
+
+  .page-subtitle {
+    font-size: 15px;
+  }
+
+  /* Welcome */
+  .welcome-content {
+    padding: 24px;
+  }
+
+  .welcome-content h2 {
+    font-size: 26px;
+  }
+
+  .main-image {
+    height: 250px;
+    margin-top: 20px;
+  }
+
+  /* Stats */
+  .stat-number {
+    font-size: 22px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+  }
+
+  /* Section Titles */
+  .section-title {
+    font-size: 24px;
+  }
+
+  .section-description {
+    font-size: 15px;
+  }
+
+  /* Video */
+  .video-section {
+    padding: 30px 0;
+    margin: 20px 0;
+  }
+
+  .video-player {
+    height: 280px;
+  }
+
+  /* Steps */
+  .how-it-works {
+    padding: 30px 0;
+  }
+
+  .step-card {
+    padding: 18px;
+  }
+
+  /* Quick Access */
+  .quick-access {
+    padding: 30px 0;
+    margin: 20px 0;
+  }
+
+  .quick-card {
+    padding: 20px;
+  }
+
+  /* Dogs */
+  .dog-card img {
+    height: 180px;
+  }
+
+  .filter-section {
+    padding: 16px;
+  }
+
+  .filter-group select,
+  .filter-group input {
+    width: 100%;
+  }
+
+  /* Dog Details */
+  .dog-gallery img {
+    height: 250px;
+  }
+
+  .dog-info-card {
+    padding: 20px;
+  }
+
+  .dog-info-card h1 {
+    font-size: 24px;
+  }
+
+  /* Tips */
+  .tip-card {
+    padding: 20px;
+  }
+
+  .tip-card .tip-icon {
+    font-size: 32px;
+  }
+
+  /* Emergency */
+  .emergency-card {
+    padding: 16px 20px;
+  }
+
+  .emergency-number {
+    font-size: 20px;
+  }
+
+  /* CTA */
+  .cta-section {
+    padding: 30px 16px;
+    border-radius: 16px;
+  }
+
+  .cta-title {
+    font-size: 22px;
+  }
+
+  .cta-text {
+    font-size: 15px;
+  }
+
+  /* Form */
+  .form-section {
+    max-width: 100%;
+  }
+
+  .form-card {
+    padding: 20px;
+  }
+
+  .form-card h2 {
+    font-size: 22px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 12px 14px;
+    font-size: 15px;
+  }
+
+  /* Testimonials */
+  .testimonial-card {
+    padding: 18px;
+  }
+
+  /* Notice Board */
+  .additional-info {
+    padding: 30px 0;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .info-title {
+    font-size: 24px;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 30px 0 10px;
+  }
+
+  .footer-heading {
+    font-size: 16px;
+  }
+
+  /* About page responsive */
+  .about-card {
+    padding: 24px;
+  }
+
+  .stats-bar-number {
+    font-size: 2rem;
+  }
+
+  .team-avatar {
+    width: 64px;
+    height: 64px;
+    line-height: 58px;
+    font-size: 1.5rem;
+  }
+
+  .bio-panel {
+    padding: 18px 40px 18px 18px;
+  }
+
+  .contact-card {
+    padding: 22px;
+  }
+
+  /* Map responsive */
+  .map-container iframe {
+    height: 280px;
+  }
+
+  .map-overlay {
+    bottom: 10px;
+    left: 10px;
+    padding: 10px 14px;
+    max-width: 200px;
+  }
+
+  .map-address {
+    font-size: 0.85rem;
+  }
+}
+
+/* ---- מובייל (עד 576px) ---- */
+@media screen and (max-width: 576px) {
+  /* Header */
+  .logo-img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .site-title {
+    font-size: 18px;
+  }
+
+  /* Page Header */
+  .page-header {
+    padding: 25px 0;
+    margin-bottom: 20px;
+  }
+
+  .page-title {
+    font-size: 22px;
+  }
+
+  .page-subtitle {
+    font-size: 13px;
+  }
+
+  /* Welcome */
+  .welcome-content {
+    padding: 16px;
+  }
+
+  .welcome-content h2 {
+    font-size: 20px;
+  }
+
+  .welcome-content p {
+    font-size: 14px;
+  }
+
+  .main-image {
+    height: 200px;
+  }
+
+  /* Buttons */
+  .btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  /* Stats */
+  .stat-card {
+    padding: 12px;
+  }
+
+  .stat-number {
+    font-size: 20px;
+  }
+
+  /* Section Titles */
+  .section-title {
+    font-size: 20px;
+  }
+
+  .section-description {
+    font-size: 14px;
+  }
+
+  /* Video */
+  .video-player {
+    height: 200px;
+  }
+
+  .video-caption {
+    font-size: 12px;
+  }
+
+  /* Steps */
+  .step-number {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+  }
+
+  .step-title {
+    font-size: 16px;
+  }
+
+  /* Dogs */
+  .dog-card img {
+    height: 160px;
+  }
+
+  .dog-card h3 {
+    font-size: 18px;
+  }
+
+  .dog-tag {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+
+  /* Dog Details */
+  .dog-gallery img {
+    height: 200px;
+  }
+
+  .dog-info-card h1 {
+    font-size: 22px;
+  }
+
+  .spec-item {
+    padding: 10px;
+  }
+
+  .spec-item .value {
+    font-size: 15px;
+  }
+
+  .trait-tag {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  /* Tips */
+  .tip-card {
+    padding: 16px;
+  }
+
+  .tip-card .tip-icon {
+    font-size: 28px;
+  }
+
+  .tip-card h3 {
+    font-size: 17px;
+  }
+
+  .tip-card p,
+  .tip-card li {
+    font-size: 13px;
+  }
+
+  /* Emergency */
+  .emergency-card {
+    padding: 12px 16px;
+  }
+
+  .emergency-icon {
+    font-size: 24px;
+  }
+
+  .emergency-number {
+    font-size: 18px;
+  }
+
+  /* CTA */
+  .cta-section {
+    padding: 24px 12px;
+    border-radius: 12px;
+  }
+
+  .cta-title {
+    font-size: 18px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  /* Form */
+  .form-card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .form-card h2 {
+    font-size: 20px;
+  }
+
+  /* Testimonials */
+  .testimonial-card {
+    padding: 14px;
+  }
+
+  .testimonial-text {
+    font-size: 14px;
+  }
+
+  /* Notice Board */
+  .info-title {
+    font-size: 20px;
+  }
+
+  .info-item {
+    padding: 14px;
+  }
+
+  .info-subtitle {
+    font-size: 16px;
+  }
+
+  /* Footer */
+  .footer-heading {
+    font-size: 15px;
+  }
+
+  .footer-text,
+  .footer-links a {
+    font-size: 13px;
+  }
+
+  .social-link {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  /* About page responsive */
+  .about-hero-title {
+    font-size: 1.35rem;
+  }
+
+  .about-hero-desc {
+    font-size: 0.95rem;
+  }
+
+  .about-card {
+    padding: 18px;
+  }
+
+  .stats-bar-number {
+    font-size: 1.7rem;
+  }
+
+  .stats-bar-label {
+    font-size: 0.8rem;
+  }
+
+  /* Map responsive */
+  .map-container iframe {
+    height: 250px;
+  }
+
+  .map-overlay {
+    bottom: 8px;
+    left: 8px;
+    padding: 8px 12px;
+    max-width: 180px;
+  }
+
+  .map-address {
+    font-size: 0.8rem;
+  }
+}
+
+/* ---- מובייל קטן (עד 400px) ---- */
+@media screen and (max-width: 400px) {
+  .page-title {
+    font-size: 18px;
+  }
+
+  .site-title {
+    font-size: 16px;
+  }
+
+  .welcome-content h2 {
+    font-size: 18px;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+
+  .video-player {
+    height: 160px;
+  }
+
+  .btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .dog-card img {
+    height: 140px;
+  }
+
+  .dog-gallery img {
+    height: 160px;
+  }
+}
+
+/* ===============================================
+   Stories Page
+   =============================================== */
+.stories-counter {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.story-tile {
+  background: #fff;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.story-tile:hover {
+  background: #eff6ff;
+  border-color: #60a5fa;
+}
+
+.story-tile.story-tile-active {
+  border-color: #16213e;
+  background: #dbeafe;
+}
+
+.story-tile h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #16213e;
+  margin-bottom: 8px;
+}
+
+.story-tile p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 0;
+}
+
+.story-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.story-tag-adoption   { background: #dbeafe; color: #1e40af; }
+.story-tag-friendship { background: #fce7f3; color: #9d174d; }
+.story-tag-rehab      { background: #fef3c7; color: #92400e; }
+.story-tag-education  { background: #d1fae5; color: #065f46; }
+
+#storyPanel {
+  background: #fff;
+  border: 2px solid #16213e;
+  border-radius: 12px;
+  padding: 32px;
+  margin-top: 24px;
+}
+
+#storyTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #16213e;
+  margin-bottom: 16px;
+}
+
+#storyText {
+  color: #374151;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+#closeStory {
+  background: #16213e;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+#closeStory:hover {
+  background: #0f4c75;
+}

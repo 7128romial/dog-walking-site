@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="טופס הרשמה להתנדבות - WalkMe">
+  <title>WalkMe - הרשמה להתנדבות</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">דלג לתוכן הראשי</a>
+
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a href="../index.html" class="navbar-brand logo-link">
+          <img src="../images/logo.jpeg" alt="WalkMe Logo" class="logo-img">
+          <span class="site-title">WalkMe</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="תפריט ניווט">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="../index.html">דף הבית</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">אודות</a></li>
+            <li class="nav-item"><a class="nav-link" href="dogs.html">רשימת כלבים</a></li>
+            <li class="nav-item"><a class="nav-link" href="tips.html">טיפים למתנדבים</a></li>
+            <li class="nav-item"><a class="nav-link" href="stories.html">סיפורי הצלחה</a></li>
+            <li class="nav-item"><a class="nav-link active" href="registration.html">הרשמה להתנדבות</a></li>
+          </ul>
+          <a class="contact-btn" href="registration.html">הצטרפו אלינו</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title">הרשמה להתנדבות</h1>
+        <p class="page-subtitle">מלאו את הפרטים ונחזור אליכם בהקדם</p>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 col-md-10 col-sm-12">
+            <div class="form-card">
+              
+              <!-- Selected Dog Info -->
+              <div id="selectedDogInfo" class="selected-dog-info">
+                <p>נבחר כלב: <strong id="selectedDogName"></strong></p>
+              </div>
+
+              <h2>פרטי המתנדב</h2>
+              <p class="form-subtitle">שדות המסומנים ב-<span class="required-mark">*</span> הם שדות חובה</p>
+
+              <form id="registrationForm" action="save_volunteer.php" method="POST">
+                
+                <input type="hidden" id="selectedDog" name="selected_dog" value="">
+
+                <!-- Row 1: Full Name + ID -->
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="form-group">
+                      <label for="fullName">שם מלא <span class="required">*</span></label>
+                      <input type="text" id="fullName" name="full_name" placeholder="הכנס שם מלא" required aria-describedby="fullNameError">
+                      <span class="error-message" id="fullNameError">נא להזין שם מלא (לפחות 2 מילים)</span>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="form-group">
+                      <label for="idNumber">תעודת זהות <span class="required">*</span></label>
+                      <input type="text" id="idNumber" name="id_number" placeholder="מספר תעודת זהות" maxlength="9" required aria-describedby="idNumberError">
+                      <span class="error-message" id="idNumberError">נא להזין תעודת זהות תקינה (9 ספרות)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Row 2: Email + Phone -->
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="form-group">
+                      <label for="email">דואר אלקטרוני <span class="required">*</span></label>
+                      <input type="email" id="email" name="email" placeholder="example@mail.com" required aria-describedby="emailError">
+                      <span class="error-message" id="emailError">נא להזין כתובת אימייל תקינה</span>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="form-group">
+                      <label for="phone">טלפון נייד <span class="required">*</span></label>
+                      <input type="tel" id="phone" name="phone" placeholder="050-1234567" required aria-describedby="phoneError">
+                      <span class="error-message" id="phoneError">נא להזין מספר טלפון תקין (10 ספרות)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Row 3: Date + Time -->
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="form-group">
+                      <label for="preferredDate">תאריך מועדף <span class="required">*</span></label>
+                      <input type="date" id="preferredDate" name="preferred_date" required>
+                      <span class="error-message" id="dateError">נא לבחור תאריך עתידי</span>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="form-group">
+                      <label for="preferredTime">שעה מועדפת <span class="required">*</span></label>
+                      <select id="preferredTime" name="preferred_time" required>
+                        <option value="">בחר שעה</option>
+                        <option value="08:00">08:00 - 10:00</option>
+                        <option value="10:00">10:00 - 12:00</option>
+                        <option value="14:00">14:00 - 16:00</option>
+                        <option value="16:00">16:00 - 18:00</option>
+                        <option value="18:00">18:00 - 20:00</option>
+                      </select>
+                      <span class="error-message" id="timeError">נא לבחור שעה</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Dog Selection -->
+                <div class="form-group">
+                  <label for="dogSelect">בחר כלב להתנדבות <span class="required">*</span></label>
+                  <select id="dogSelect" name="dog_id" required>
+                    <option value="">בחר כלב</option>
+                    <option value="1">חומי - גולדן רטריבר</option>
+                    <option value="2">לונה - בורדר קולי</option>
+                    <option value="3">מקס - לברדור</option>
+                    <option value="4">בלה - ביגל</option>
+                    <option value="5">רוקי - האסקי</option>
+                    <option value="6">ג'קי - מעורב</option>
+                  </select>
+                  <span class="error-message" id="dogError">נא לבחור כלב</span>
+                </div>
+
+                <!-- Experience -->
+                <div class="form-group">
+                  <label for="experience">ניסיון קודם עם כלבים</label>
+                  <select id="experience" name="experience">
+                    <option value="">בחר רמת ניסיון</option>
+                    <option value="none">אין ניסיון</option>
+                    <option value="little">מעט ניסיון</option>
+                    <option value="moderate">ניסיון בינוני</option>
+                    <option value="experienced">מנוסה</option>
+                  </select>
+                </div>
+
+                <!-- Comments -->
+                <div class="form-group">
+                  <label for="comments">הערות נוספות</label>
+                  <textarea id="comments" name="comments" placeholder="ספרו לנו קצת על עצמכם או שאלות שיש לכם..."></textarea>
+                </div>
+
+                <!-- Form Actions -->
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-12 mb-2">
+                    <button type="submit" class="btn btn-success w-100">שלח הרשמה</button>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 mb-2">
+                    <button type="reset" class="btn btn-secondary w-100" id="resetBtn">נקה טופס</button>
+                  </div>
+                </div>
+
+              </form>
+
+              <!-- Success Message -->
+              <div id="successMessage" class="success-message">
+                <div class="icon">הצלחה</div>
+                <h3>ההרשמה התקבלה בהצלחה!</h3>
+                <p>נציג מהעמותה יצור איתך קשר בקרוב לאישור ההתנדבות.</p>
+                <p id="summaryText"></p>
+                <a href="dogs.html" class="btn btn-primary">חזרה לרשימת הכלבים</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+          <h4 class="footer-heading">אודות WalkMe</h4>
+          <p class="footer-text">מערכת לניהול התנדבויות עבור עמותת "חברים על ארבע".</p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+          <h4 class="footer-heading">קישורים</h4>
+          <nav aria-label="ניווט תחתון"><ul class="footer-links">
+            <li><a href="../index.html">דף הבית</a></li>
+            <li><a href="dogs.html">רשימת כלבים</a></li>
+            <li><a href="tips.html">טיפים</a></li>
+            <li><a href="stories.html">סיפורי הצלחה</a></li>
+            <li><a href="about.html">אודות</a></li>
+            <li><a href="registration.html">הרשמה</a></li>
+          </ul></nav>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+          <h4 class="footer-heading">צור קשר</h4>
+          <address class="footer-contact">
+            <p>אימייל: <a href="mailto:info@walkme.co.il">info@walkme.co.il</a></p>
+            <p>טלפון: 050-1234567</p>
+            <p>כתובת: פתח תקווה, ישראל</p>
+          </address>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+          <h4 class="footer-heading">עקבו אחרינו</h4>
+          <div class="social-links">
+            <a href="#" class="social-link social-link-disabled" title="בקרוב">Facebook</a>
+            <a href="#" class="social-link social-link-disabled" title="בקרוב">Instagram</a>
+            <a href="#" class="social-link social-link-disabled" title="בקרוב">YouTube</a>
+          </div>
+          <p class="social-coming-soon">בקרוב</p>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2025 WalkMe. כל הזכויות שמורות.</p></div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/registration.js"></script>
+</body>
+</html>

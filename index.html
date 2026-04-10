@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="מערכת WalkMe - ניהול ושיבוץ התנדבויות לעמותת חברים על ארבע">
+  <meta name="keywords" content="התנדבויות, כלבים, עמותה, WalkMe, חברים על ארבע">
+  <meta name="author" content="WalkMe Team">
+  <title>WalkMe - חברים על ארבע | דף הבית</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">דלג לתוכן הראשי</a>
+
+  <!-- HEADER  -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a href="index.html" class="navbar-brand logo-link">
+          <img src="images/logo.jpeg" alt="WalkMe Logo" class="logo-img">
+          <span class="site-title">WalkMe</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="תפריט ניווט">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link active" href="index.html">דף הבית</a></li>
+            <li class="nav-item"><a class="nav-link" href="includes/about.html">אודות</a></li>
+            <li class="nav-item"><a class="nav-link" href="includes/dogs.html">רשימת כלבים</a></li>
+            <li class="nav-item"><a class="nav-link" href="includes/tips.html">טיפים למתנדבים</a></li>
+            <li class="nav-item"><a class="nav-link" href="includes/stories.html">סיפורי הצלחה</a></li>
+            <li class="nav-item"><a class="nav-link" href="includes/registration.html">הרשמה להתנדבות</a></li>
+          </ul>
+          <a class="contact-btn" href="includes/registration.html">הצטרפו אלינו</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!--  MAIN -->
+  <main id="main">
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 col-md-12">
+            <div class="welcome-content fade-in">
+              <h2>יוצאים לטיול טוב, ועושים טוב</h2>
+              <p>
+                WalkMe מחברת בין מתנדבים לבין כלבי העמותה "חברים על ארבע" הזקוקים לטיולים,
+                לקשר אנושי ולפעילות גופנית. כל טיול שאתם עושים <mark>משנה חיים</mark>.
+              </p>
+
+              <!-- JS: Dog preference selector - saves to localStorage, auto-filters on dogs page -->
+              <div class="quick-match-section" id="quickMatchSection">
+                <label>איזה כלב מתאים לך? בחרו גודל מועדף:</label>
+                <div class="match-options">
+                  <button class="match-btn" data-size="small">קטן</button>
+                  <button class="match-btn" data-size="medium">בינוני</button>
+                  <button class="match-btn" data-size="large">גדול</button>
+                </div>
+                <p id="matchFeedback" class="match-feedback"></p>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-2">
+                  <div class="stat-card">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">כלבים ממתינים</div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-2">
+                  <div class="stat-card">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">מתנדבים פעילים</div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-2">
+                  <div class="stat-card">
+                    <div class="stat-number">2,000+</div>
+                    <div class="stat-label">טיולים החודש</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-12">
+            <figure class="fade-in">
+              <img src="images/dog-homi.jpg"
+                   alt="כלב גולדן רטריבר מאושר" class="main-image">
+              <figcaption class="image-caption">כלבי העמותה ממתינים לטיול הבא שלכם</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section fade-in">
+      <div class="container">
+        <h3 class="section-title">הכירו את הכלבים שלנו</h3>
+        <p class="section-description">צפו בסרטון קצר שמציג כלב חמוד שלנו</p>
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10 col-sm-12">
+            <figure class="video-wrapper">
+              <video class="video-player" controls preload="metadata">
+                <source src="images/video.mp4" type="video/mp4">
+                הדפדפן שלך לא תומך בהצגת וידאו.
+              </video>
+              <figcaption class="video-caption">שם הכלב: חומי </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works fade-in">
+      <div class="container">
+        <h3 class="section-title">איך זה עובד?</h3>
+        <p class="section-description">ארבעה שלבים פשוטים להתחיל להתנדב</p>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+            <div class="step-card">
+              <span class="step-number">1</span>
+              <h4 class="step-title">צפייה והכרות</h4>
+              <p>צפו בסרטון המבוא והכירו את מטרת המערכת.</p>
+              <a href="includes/tips.html" class="step-link">למד עוד</a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+            <div class="step-card">
+              <span class="step-number">2</span>
+              <h4 class="step-title">בחירת כלב</h4>
+              <p>עברו לרשימת הכלבים וקראו על האופי והצרכים.</p>
+              <a href="includes/dogs.html" class="step-link">למד עוד</a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+            <div class="step-card">
+              <span class="step-number">3</span>
+              <h4 class="step-title">קריאת טיפים</h4>
+              <p>קראו הנחיות בטיחות להוצאת הכלב לטיול.</p>
+              <a href="includes/tips.html" class="step-link">למד עוד</a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+            <div class="step-card">
+              <span class="step-number">4</span>
+              <h4 class="step-title">קביעת התנדבות</h4>
+              <p>מלאו טופס פשוט ובחרו מועד נוח.</p>
+              <a href="includes/registration.html" class="step-link">למד עוד</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials fade-in">
+      <div class="container">
+        <h3 class="section-title">מה אומרים המתנדבים?</h3>
+        <p class="section-description">סיפורים מהשטח</p>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+            <blockquote class="testimonial-card">
+              <p class="testimonial-quote">"התנדבות עם הכלבים נתנה לי תחושה של משמעות והרבה אהבה. חומי שינה לי את החיים."</p>
+              <footer>
+                <strong>נועה ש.</strong>
+                <span class="testimonial-detail">מתנדבת מתל אביב, שנתיים בעמותה</span>
+              </footer>
+            </blockquote>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+            <blockquote class="testimonial-card">
+              <p class="testimonial-quote">"המערכת נוחה ופשוטה, אני משבץ את עצמי בשניות. ההתנדבות הפכה לחלק קבוע מהשבוע שלי."</p>
+              <footer>
+                <strong>דני א.</strong>
+                <span class="testimonial-detail">מתנדב ותיק, שלוש שנים בעמותה</span>
+              </footer>
+            </blockquote>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+            <blockquote class="testimonial-card">
+              <p class="testimonial-quote">"הטיפים באתר עזרו לי מאוד בהתנדבות הראשונה. הרגשתי מוכנה ובטוחה כבר מהרגע הראשון."</p>
+              <footer>
+                <strong>שירה מ.</strong>
+                <span class="testimonial-detail">מתנדבת חדשה, חצי שנה בעמותה</span>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+        <div class="text-center mt-3">
+          <a href="includes/stories.html" class="btn btn-secondary">קראו עוד סיפורי הצלחה</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Notice Board -->
+    <aside class="additional-info fade-in">
+      <div class="container">
+        <h3 class="info-title">לוח מודעות ועדכונים</h3>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+            <article class="info-item">
+              <h4>יום אימוץ חגיגי</h4>
+              <p>ביום שישי הקרוב (15.11) בפארק הירקון, בין השעות 10:00-14:00.</p>
+            </article>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+            <article class="info-item">
+              <h4>מבצע "חורף חם"</h4>
+              <p>אנו אוספים שמיכות ומגבות לחימום הכלבים בחורף.</p>
+            </article>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+            <article class="info-item">
+              <h4>דרושים מתנדבים</h4>
+              <p>דרושים מתנדבים להסעות לטיפולים וטרינריים בבקרים.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+  </main>
+
+  <!--  FOOTER  -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+          <h4 class="footer-heading">אודות WalkMe</h4>
+          <p class="footer-text">מערכת לניהול התנדבויות עבור עמותת "חברים על ארבע".</p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+          <h4 class="footer-heading">קישורים</h4>
+          <nav aria-label="ניווט תחתון">
+            <ul class="footer-links">
+              <li><a href="index.html">דף הבית</a></li>
+              <li><a href="includes/about.html">אודות</a></li>
+              <li><a href="includes/dogs.html">רשימת כלבים</a></li>
+              <li><a href="includes/tips.html">טיפים</a></li>
+              <li><a href="includes/stories.html">סיפורי הצלחה</a></li>
+              <li><a href="includes/registration.html">הרשמה</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+          <h4 class="footer-heading">צור קשר</h4>
+          <address class="footer-contact">
+            <p>אימייל: <a href="mailto:info@walkme.co.il">info@walkme.co.il</a></p>
+            <p>טלפון: 050-1234567</p>
+            <p>כתובת: פתח תקווה, ישראל</p>
+          </address>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+          <h4 class="footer-heading">עקבו אחרינו</h4>
+          <div class="social-links">
+            <a href="#" class="social-link social-link-disabled" title="בקרוב">Facebook</a>
+            <a href="#" class="social-link social-link-disabled" title="בקרוב">Instagram</a>
+            <a href="#" class="social-link social-link-disabled" title="בקרוב">YouTube</a>
+          </div>
+          <p class="social-coming-soon">בקרוב</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 WalkMe. כל הזכויות שמורות.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
