@@ -1,8 +1,6 @@
-/* ===============================================
-WalkMe - Main Stylesheet
-   =============================================== */
+/* עיצוב כללי לאתר WalkMe */
 
-/* Reset */
+/* רסט בסיסי */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { height: 100%; }
 body {
@@ -95,11 +93,9 @@ body {
   box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.3);
 }
 
-/* ============================================================
-   About page styles
-   ============================================================ */
+/* עיצוב דף אודות */
 
-/* --- Hero Section --- */
+/* אזור ה-Hero */
 .about-hero {
   background: #16213e;
   color: #fff;
@@ -522,9 +518,7 @@ body {
   }
 }
 
-/* ===============================================
-   Main Sections
-   =============================================== */
+/* אזורים ראשיים */
 .site-main { padding: 40px 0; min-height: 100%; }
 
 /* Welcome Section */
@@ -604,9 +598,7 @@ mark { background-color: #dbeafe; color: #16213e; padding: 0 6px; border-radius:
   font-size: 18px;
 }
 
-/* ===============================================
-   DOGS GRID
-   =============================================== */
+/* רשת הכלבים */
 .dogs-section { padding: 20px 0; }
 
 .dogs-grid {
@@ -714,9 +706,7 @@ mark { background-color: #dbeafe; color: #16213e; padding: 0 6px; border-radius:
   outline: none;
 }
 
-/* ===============================================
-   DOG DETAILS PAGE
-   =============================================== */
+/* דף פרטי כלב */
 .dog-details-section {
   padding: 40px 0;
 }
@@ -789,9 +779,7 @@ mark { background-color: #dbeafe; color: #16213e; padding: 0 6px; border-radius:
   font-weight: 500;
 }
 
-/* ===============================================
-REGISTRATION FORM
-   =============================================== */
+/* טופס הרשמה */
 .form-section {
   padding: 20px;
   max-width: 900px;
@@ -934,9 +922,7 @@ REGISTRATION FORM
   margin-bottom: 24px;
 }
 
-/* ===============================================
-TIPS PAGE
-   =============================================== */
+/* דף טיפים */
 .tips-section {
   padding: 40px 0;
 }
@@ -1191,9 +1177,7 @@ TIPS PAGE
 .info-subtitle { font-size: 20px; font-weight: bold; margin-bottom: 10px; }
 .info-item p { color: #e5e7eb; font-size: 15px; }
 
-/* ===============================================
-   FOOTER
-   =============================================== */
+/* פוטר */
 .site-footer {
   background: #1a1a2e;
   color: #e5e7eb;
@@ -1240,9 +1224,7 @@ TIPS PAGE
 
 .footer-bottom { text-align: center; padding-top: 20px; font-size: 13px; color: #9ca3af; }
 
-/* ===============================================
-   Animations (jQuery)
-   =============================================== */
+/* אנימציות */
 .fade-in {
   opacity: 0.4;
 }
@@ -1251,15 +1233,8 @@ TIPS PAGE
   opacity: 1;
 }
 
-/* ===============================================
-   Responsive Design
-   =============================================== */
-/* Bootstrap row/col handles responsive grid layout */
-
-/* ===============================================
-   Tips Page Specific Styles
-   =============================================== */
-/* Emergency Section */
+/* עיצוב מותאם לדף טיפים */
+/* אזור חירום */
 .emergency-section { background: #fef2f2; margin-top: 60px; }
 .emergency-title { color: #dc2626; }
 .emergency-grid { margin-top: 30px; }
@@ -1361,9 +1336,7 @@ TIPS PAGE
 
 .trait-hover { background: #1e40af !important; color: #fff !important; }
 
-/* ===============================================
-   RESPONSIVE DESIGN - Media Queries
-   =============================================== */
+/* עיצוב רספונסיבי */
 
 /* ---- טאבלט רחב (עד 1024px) ---- */
 @media screen and (max-width: 1024px) {
@@ -1911,9 +1884,7 @@ TIPS PAGE
   }
 }
 
-/* ===============================================
-   Stories Page
-   =============================================== */
+/* דף סיפורי הצלחה */
 .stories-counter {
   text-align: center;
   color: #6b7280;

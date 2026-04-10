@@ -1,47 +1,40 @@
 $(document).ready(function () {
 
-  /* ============================================================
-     1. אלמנט שמגיב לאירועים:
-        לחיצה (click) ומקלדת (keypress) על כרטיסי חברי הצוות
-     ============================================================ */
+  // לחיצה או מקלדת על כרטיסי הצוות
   $(".team-card").on("click keypress", function (e) {
 
-    // תמיכה בניווט מקלדת - רק Enter
+    // תמיכה במקלדת - רק Enter
     if (e.type === "keypress" && e.which !== 13) return;
 
     var $card = $(this);
 
-    // לחיצה שנייה על אותו כרטיס = סגירה
+    // לחיצה שנייה על אותו כרטיס סוגרת את הפאנל
     if ($card.hasClass("active")) {
       closeBioPanel();
       return;
     }
 
-    /* 2. שינוי עיצוב דינמי באמצעות מחלקה:
-          הסרת active מכולם, הוספה לנבחר */
+    // הסרה של active מכולם והוספה לכרטיס שנלחץ
     $(".team-card").removeClass("active");
     $card.addClass("active");
 
-    /* 3. כתיבה לתוך אלמנט בדף:
-          שליפת הנתונים מה-data attributes וכתיבה ל-#bioText */
+    // שליפת המידע מה-data attributes וכתיבה לפאנל
     var name = $card.data("name");
     var role = $card.data("role");
     var bio  = $card.data("bio");
 
     $("#bioText").html("<strong>" + name + "</strong> | " + role + "<br>" + bio);
 
-    // הצגת הפאנל עם אנימציה
+    // הצגת הפאנל
     $("#teamBioPanel").slideDown(300);
 
-    // גלילה חלקה לפאנל
+    // גלילה לפאנל
     $("html, body").animate({
       scrollTop: $("#teamBioPanel").offset().top - 100
     }, 400);
   });
 
-  /* ============================================================
-     סגירת פאנל הביו
-     ============================================================ */
+  // כפתור סגירה של הפאנל
   $("#closeBio").on("click", function () {
     closeBioPanel();
   });
@@ -53,9 +46,7 @@ $(document).ready(function () {
     });
   }
 
-  /* ============================================================
-     Fade-in בגלילה (כמו בשאר הדפים בפרויקט)
-     ============================================================ */
+  // אפקט fade in בגלילה
   function checkFadeIn() {
     $(".fade-in").each(function () {
       var elementTop = $(this).offset().top;

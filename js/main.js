@@ -1,59 +1,43 @@
-/* ===============================================
-   WalkMe - Main JavaScript
-   jQuery and shared functionality
-   =============================================== */
+// קובץ ראשי - פונקציות משותפות לכל הדפים
 
 $(document).ready(function() {
 
-    // ===============================================
-    // JQUERY: Scroll animations - fade in elements
-    // ===============================================
+    // אפקט fade in בגלילה
     function checkFadeIn() {
         $('.fade-in').each(function() {
             var elementTop = $(this).offset().top;
             var windowBottom = $(window).scrollTop() + $(window).height();
-            
+
             if (windowBottom > elementTop + 50) {
                 $(this).addClass('visible');
             }
         });
     }
-    
-    // Check on load
+
     checkFadeIn();
-    
-    // Check on scroll
+
     $(window).on('scroll', function() {
         checkFadeIn();
     });
 
-    // ===============================================
-    // JS: Homepage - Quick Match dog size preference
-    // Saves preference to localStorage, transfers to dogs page
-    // ===============================================
+    // התאמה מהירה - שמירה ב-localStorage ומעבר לדף הכלבים
     $('.match-btn').on('click', function() {
         var size = $(this).data('size');
-        
-        // Dynamic styling: add/remove selected class
+
         $('.match-btn').removeClass('selected');
         $(this).addClass('selected');
-        
-        // Save preference to localStorage (data transfer between pages)
+
         localStorage.setItem('preferredDogSize', size);
-        
-        // Writing to element: show feedback message
+
         var sizeNames = { small: 'קטן', medium: 'בינוני', large: 'גדול' };
         $('#matchFeedback').text('בחרת כלב ' + sizeNames[size] + '! עוברים לרשימת הכלבים...');
-        
-        // Navigate to dogs page after short delay
+
         setTimeout(function() {
             window.location.href = 'includes/dogs.html';
         }, 1000);
     });
 
-    // ===============================================
-    // JS: Header scroll effect
-    // ===============================================
+    // אפקט צל לכותרת בגלילה
     $(window).on('scroll', function() {
         if ($(window).scrollTop() > 50) {
             $('.site-header').css('box-shadow', '0 4px 20px rgba(0,0,0,0.4)');
@@ -62,9 +46,7 @@ $(document).ready(function() {
         }
     });
 
-    // ===============================================
-    // JS: Smooth scroll for anchor links
-    // ===============================================
+    // גלילה חלקה לעוגנים
     $('a[href^="#"]').on('click', function(e) {
         var href = this.getAttribute('href');
         if (href === '#') return;
@@ -77,9 +59,7 @@ $(document).ready(function() {
         }
     });
 
-    // ===============================================
-    // JQUERY: Hover effects on cards
-    // ===============================================
+    // אפקט hover על הכרטיסים
     $('.dog-card, .quick-card, .step-card, .tip-card').hover(
         function() {
             $(this).css('transform', 'translateY(-6px)');
@@ -89,9 +69,7 @@ $(document).ready(function() {
         }
     );
 
-    // ===============================================
-    // JS: Active nav link highlighting
-    // ===============================================
+    // סימון הדף הנוכחי בתפריט
     var currentPage = window.location.pathname.split('/').pop() || 'index.html';
     $('.nav-link').each(function() {
         var href = $(this).attr('href');
@@ -100,9 +78,7 @@ $(document).ready(function() {
         }
     });
 
-    // ===============================================
-    // JQUERY: Button click animation
-    // ===============================================
+    // אפקט לחיצה על כפתורים
     $('.btn').on('mousedown', function() {
         $(this).css('transform', 'scale(0.95)');
     }).on('mouseup mouseleave', function() {

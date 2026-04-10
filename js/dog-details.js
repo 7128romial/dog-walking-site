@@ -1,13 +1,8 @@
-/* ===============================================
-   WalkMe - Dog Details Page JavaScript
-   Load dog data from URL parameters
-   =============================================== */
+// דף פרטי כלב - טעינת הנתונים לפי ה-id מה-URL
 
 $(document).ready(function() {
 
-    // ===============================================
-    // Dogs Database (simulated)
-    // ===============================================
+    // מאגר הכלבים
     var dogsData = {
         1: {
             name: 'חומי',
@@ -89,9 +84,7 @@ $(document).ready(function() {
         }
     };
 
-    // ===============================================
-    // JS: Get dog ID from URL parameters
-    // ===============================================
+    // שליפת ה-id מהפרמטרים של ה-URL
     function getUrlParam(param) {
         var urlParams = new URLSearchParams(window.location.search);
         return urlParams.get(param);
@@ -99,34 +92,31 @@ $(document).ready(function() {
 
     var dogId = getUrlParam('id');
 
-    // If no ID in URL, try localStorage
+    // אם אין id ב-URL ננסה לקחת מה-localStorage
     if (!dogId) {
         dogId = localStorage.getItem('selectedDogId');
     }
 
-    // Only allow dog 1 (Chomi) - redirect others to dogs.html
+    // רק חומי זמין כרגע - שאר הכלבים מועברים חזרה לרשימה
     if (dogId != 1) {
         alert('פרטי כלב זה יהיו זמינים בקרוב!\nכרגע רק חומי זמין להתנדבות.');
         window.location.href = 'dogs.html';
         return;
     }
 
-    // Default to dog 1 if no ID found
+    // ברירת מחדל לחומי אם לא נמצא id
     if (!dogId || !dogsData[dogId]) {
         dogId = 1;
     }
 
-    // ===============================================
-    // JS: Load dog data and display
-    // (Writing to elements)
-    // ===============================================
+    // טעינת הנתונים של הכלב והצגה בדף
     var dog = dogsData[dogId];
 
     if (dog) {
-        // Update page title
+        // עדכון כותרת העמוד
         document.title = 'WalkMe - ' + dog.name;
 
-        // Update dog info (writing to elements)
+        // עדכון פרטי הכלב
         $('#dogName').text(dog.name);
         $('#dogImage').attr('src', dog.image).attr('alt', dog.name);
         $('#dogBreed').text(dog.breed);
@@ -135,40 +125,36 @@ $(document).ready(function() {
         $('#dogEnergy').text(dog.energy);
         $('#dogDescription').text(dog.description);
 
-        // Update traits (writing to element)
+        // הוספת התכונות
         var traitsHtml = '';
         dog.traits.forEach(function(trait) {
             traitsHtml += '<span class="trait-tag">' + trait + '</span>';
         });
         $('#dogTraits').html(traitsHtml);
 
-        // Update video section
+        // עדכון אזור הוידאו
         $('#dogNameVideo').text(dog.name);
         $('#dogNameCaption').text(dog.name);
         $('#dogNameTips').text(dog.name);
 
-        // Update tips
+        // עדכון הטיפים
         $('#tipDuration').text(dog.tipDuration);
         $('#tipTreats').text(dog.tipTreats);
         $('#tipWarning').text(dog.tipWarning);
 
-        // Update registration button link
+        // עדכון הלינק לכפתור ההרשמה
         $('#registerBtn').attr('href', 'registration.html?dog=' + dogId + '&name=' + encodeURIComponent(dog.name));
 
-        // Save to localStorage for registration page
+        // שמירה ב-localStorage בשביל דף ההרשמה
         localStorage.setItem('selectedDogId', dogId);
         localStorage.setItem('selectedDogName', dog.name);
     }
 
-    // ===============================================
-    // JQUERY: Add animation to elements
-    // ===============================================
+    // אנימציות כניסה
     $('.dog-gallery img').hide().fadeIn(800);
     $('.dog-info-card').hide().slideDown(600);
 
-    // ===============================================
-    // JQUERY: Dynamic styling on hover
-    // ===============================================
+    // אפקט hover על התגיות
     $('.trait-tag').hover(
         function() {
             $(this).addClass('trait-hover');

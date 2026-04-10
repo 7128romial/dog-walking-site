@@ -27,7 +27,7 @@ $(document).ready(function () {
     }
   };
 
-  /* --- כתיבה לתוך אלמנט: עדכון מונה --- */
+  // עדכון מונה הסיפורים המוצגים
   function updateCounter() {
     var count = $(".story-tile:visible").length;
     $("#storiesCounter").text("מציג " + count + " סיפורים");
@@ -35,15 +35,15 @@ $(document).ready(function () {
 
   updateCounter();
 
-  /* --- אלמנט שמגיב לאירוע: לחיצה על כפתורי סינון --- */
+  // לחיצה על כפתורי הסינון
   $(".story-filter-btn").click(function () {
     var filter = $(this).data("filter");
 
-    /* שינוי עיצוב דינמי: כפתור הסינון הפעיל */
+    // הסרת active מכל הכפתורים והוספה לכפתור שנלחץ
     $(".story-filter-btn").removeClass("active");
     $(this).addClass("active");
 
-    /* הצגה והסתרה לפי קטגוריה */
+    // הצגה או הסתרה של הכרטיסים לפי הקטגוריה
     if (filter === "all") {
       $(".story-tile").parent().show();
     } else {
@@ -56,28 +56,28 @@ $(document).ready(function () {
       });
     }
 
-    /* כתיבה לתוך אלמנט: עדכון מונה */
+    // עדכון המונה
     updateCounter();
 
-    /* סגירת פאנל בעת סינון */
+    // סגירת הפאנל
     $("#storyPanel").hide();
     $(".story-tile").removeClass("story-tile-active");
   });
 
-  /* --- אלמנט שמגיב לאירוע: לחיצה על כרטיס סיפור --- */
+  // לחיצה על כרטיס סיפור
   $(".story-tile").click(function () {
     var storyKey = $(this).data("story");
     var story = stories[storyKey];
 
-    /* כתיבה לתוך אלמנט: כותרת ותוכן הפאנל */
+    // כתיבת הכותרת והתוכן בפאנל
     $("#storyTitle").text(story.title);
     $("#storyText").text(story.text);
 
-    /* שינוי עיצוב דינמי: הכרטיס הנבחר */
+    // סימון הכרטיס הנבחר
     $(".story-tile").removeClass("story-tile-active");
     $(this).addClass("story-tile-active");
 
-    /* הצגת הפאנל */
+    // הצגת הפאנל וגלילה אליו
     $("#storyPanel").slideDown(400);
 
     $("html, body").animate({
@@ -85,7 +85,7 @@ $(document).ready(function () {
     }, 400);
   });
 
-  /* --- סגירת פאנל --- */
+  // כפתור סגירת הפאנל
   $("#closeStory").click(function () {
     $("#storyPanel").slideUp(400);
     $(".story-tile").removeClass("story-tile-active");
