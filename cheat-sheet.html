@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>WalkMe - דף עזר להצגה</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #e8e8e8;
+    color: #1a1a1a;
+    direction: rtl;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 10px auto;
+    padding: 8mm 9mm;
+    background: #fff;
+  }
+
+  h1 {
+    font-size: 17pt;
+    text-align: center;
+    color: #0f4c75;
+    margin-bottom: 2px;
+  }
+  .subtitle {
+    text-align: center;
+    font-size: 10pt;
+    color: #555;
+    margin-bottom: 6px;
+  }
+
+  .section {
+    border-radius: 5px;
+    padding: 5px 8px;
+    margin-bottom: 6px;
+  }
+  .section h2 {
+    font-size: 12.5pt;
+    margin-bottom: 3px;
+    padding-bottom: 2px;
+    border-bottom: 1.5px solid rgba(0,0,0,0.25);
+  }
+
+  /* צבעי סקציות */
+  .s-time    { background: #e3f2fd; border: 1.5px solid #1976d2; }
+  .s-time h2 { color: #0d47a1; }
+  .s-script    { background: #e8f5e9; border: 1.5px solid #388e3c; }
+  .s-script h2 { color: #1b5e20; }
+  .s-keywords    { background: #fff3e0; border: 1.5px solid #f57c00; }
+  .s-keywords h2 { color: #e65100; }
+  .s-qa    { background: #f3e5f5; border: 1.5px solid #8e24aa; }
+  .s-qa h2 { color: #4a148c; }
+  .s-warn    { background: #ffebee; border: 1.5px solid #d32f2f; }
+  .s-warn h2 { color: #b71c1c; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 10.5pt; }
+  td, th { border: 1px solid #999; padding: 2.5px 5px; text-align: right; vertical-align: top; }
+  th { background: rgba(0,0,0,0.06); }
+
+  .time-table td:first-child { font-weight: bold; white-space: nowrap; width: 70px; }
+
+  .script-box {
+    background: #fff;
+    border: 1px dashed #388e3c;
+    border-radius: 4px;
+    padding: 5px 7px;
+    margin-bottom: 4px;
+    font-size: 11pt;
+    line-height: 1.45;
+  }
+  .script-box .label {
+    font-weight: bold;
+    color: #1b5e20;
+    display: block;
+    margin-bottom: 1px;
+  }
+
+  ul { list-style: none; }
+  .s-keywords li {
+    font-size: 10.5pt;
+    line-height: 1.5;
+    padding: 1px 0;
+  }
+  .s-keywords li b { color: #e65100; }
+  code {
+    font-family: "Consolas", monospace;
+    background: rgba(0,0,0,0.07);
+    padding: 0 3px;
+    border-radius: 3px;
+    font-size: 9.5pt;
+  }
+
+  .s-qa td:first-child { font-weight: bold; width: 38%; }
+  .s-qa table { font-size: 10pt; }
+
+  .s-warn ul { padding-right: 2px; }
+  .s-warn li {
+    font-size: 10.5pt;
+    color: #b71c1c;
+    font-weight: bold;
+    line-height: 1.5;
+    padding: 1px 0;
+  }
+
+  .cols { display: flex; gap: 6px; }
+  .cols > div { flex: 1; }
+
+  @media print {
+    @page { size: A4 portrait; margin: 0; }
+    body { background: #fff; }
+    .page { margin: 0; width: auto; min-height: auto; padding: 8mm; }
+    .section { border: 1.5px solid #000 !important; background: #fff !important; }
+    .section h2 { color: #000 !important; border-bottom: 1.5px solid #000; }
+    .script-box { border: 1px dashed #000; }
+    .script-box .label { color: #000; }
+    .s-keywords li b, .s-qa td, code { color: #000 !important; }
+    .s-warn li { color: #000 !important; }
+    .s-warn { background: #fff !important; }
+    th { background: #ddd !important; -webkit-print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>WalkMe — דף עזר להצגה</h1>
+  <div class="subtitle">אתר התנדבות "חברים על ארבע" · הצגה 10 דקות · רומי</div>
+
+  <!-- חלק 1 - לוח זמנים -->
+  <div class="section s-time">
+    <h2>⏱️ לוח זמנים</h2>
+    <table class="time-table">
+      <tr><td>דקה 1</td><td>פתיחה — הצגה עצמית ותיאור הפרויקט</td></tr>
+      <tr><td>דקות 2-3</td><td>דף הבית + Quick Match (התאמה מהירה לפי גודל)</td></tr>
+      <tr><td>דקה 4</td><td>רשימת כלבים</td></tr>
+      <tr><td>דקה 5</td><td>דף פרטי כלב</td></tr>
+      <tr><td>דקה 6</td><td>עמוד טיפים</td></tr>
+      <tr><td>דקה 7</td><td>טופס הרשמה + ולידציות</td></tr>
+      <tr><td>דקה 8</td><td>צד שרת — PHP + MySQL</td></tr>
+      <tr><td>דקה 9</td><td>אודות + סיפורי הצלחה</td></tr>
+      <tr><td>דקה 10</td><td>סיכום ושאלות</td></tr>
+    </table>
+  </div>
+
+  <!-- חלק 2 - משפטי פתיחה וסיום -->
+  <div class="section s-script">
+    <h2>💬 פתיחה וסיום — לקריאה מילה במילה</h2>
+    <div class="script-box">
+      <span class="label">▶ פתיחה:</span>
+      "שלום, שמי רומי. הפרויקט שלי נקרא WalkMe, אתר התנדבות להוצאת כלבים מעמותת חברים על ארבע. בניתי 7 מסכים עם HTML, CSS, Bootstrap, jQuery וטופס מחובר ל-MySQL דרך PHP."
+    </div>
+    <div class="script-box">
+      <span class="label">■ סיום:</span>
+      "בפרויקט בניתי אתר מלא ורספונסיבי עם 7 מסכים, אינטראקציות JavaScript, טופס מחובר למסד, וזרימת משתמשים לפי שלוש פרסונות. אשמח לשאלות."
+    </div>
+  </div>
+
+  <!-- חלק 3 - מילות מפתח טכניות -->
+  <div class="section s-keywords">
+    <h2>🔑 מילות מפתח טכניות</h2>
+    <ul>
+      <li><b>Quick Match:</b> <code>click</code> event ← <code>localStorage.setItem</code> ← <code>setTimeout 1000ms</code> ← redirect</li>
+      <li><b>Dog Details:</b> <code>URLSearchParams</code> ← אובייקט <code>dogsData</code> ← <code>text()</code> + <code>html()</code> + <code>fadeIn</code></li>
+      <li><b>ולידציות טופס:</b> <code>blur</code> event · regex · 5 שדות</li>
+      <li><b>AJAX:</b> <code>$.ajax</code> POST ← <code>save_volunteer.php</code> ← תגובת JSON ← <code>fadeOut/fadeIn</code></li>
+      <li><b>PHP:</b> prepared statements · <code>bind_param</code> · <code>errno 1062</code> לכפילות</li>
+      <li><b>MySQL:</b> טבלה בשם <code>registrations</code> (לא volunteers!)</li>
+    </ul>
+  </div>
+
+  <!-- חלק 4 - תשובות מהירות -->
+  <div class="section s-qa">
+    <h2>❓ תשובות מהירות לשאלות צפויות</h2>
+    <table>
+      <tr><td>למה localStorage?</td><td>העברת נתונים בין דפים בלי שרת, נשמר גם ברענון הדף</td></tr>
+      <tr><td>למה ולידציה כפולה?</td><td>JavaScript לחוויית משתמש, PHP לאבטחה אמיתית</td></tr>
+      <tr><td>מה Prepared Statements?</td><td>מפרידים נתונים מקוד SQL — מונעים SQL injection</td></tr>
+      <tr><td>מה errno 1062?</td><td>קוד כפילות של MySQL, מטופל עם הודעה ידידותית למשתמש</td></tr>
+      <tr><td>ההבדל POST / GET?</td><td>GET — פרמטרים ב-URL, לקריאה. POST — ב-body, לשליחת מידע רגיש</td></tr>
+      <tr><td>localStorage vs sessionStorage?</td><td>localStorage קבוע, sessionStorage נמחק בסגירת הטאב</td></tr>
+      <tr><td>למה Bootstrap RTL?</td><td>grid מוכן, breakpoints מוכנים, תמיכה מובנית בעברית</td></tr>
+      <tr><td>מה היית משפרת?</td><td>הוצאת סיסמאות מהקוד, reCAPTCHA, בדיקת ספרת ביקורת בת"ז</td></tr>
+    </table>
+  </div>
+
+  <!-- חלק 5 - אזהרות חמות -->
+  <div class="section s-warn">
+    <h2>⚠️ אזהרות חמות</h2>
+    <ul>
+      <li>⚠️ שם הטבלה הוא <code>registrations</code> — לא volunteers!</li>
+      <li>⚠️ ולידציית ת"ז בודקת 9 ספרות בלבד, לא ספרת ביקורת — להגיד בכנות אם נשאלת</li>
+      <li>⚠️ אם משהו נשבר בדמו — להמשיך הלאה בלי להיתקע</li>
+    </ul>
+  </div>
+
+</div>
+</body>
+</html>
