@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>WalkMe - דף עזר: סיפורי הצלחה ואודות</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #e8e8e8;
+    color: #1a1a1a;
+    direction: rtl;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 10px auto;
+    padding: 7mm 8mm;
+    background: #fff;
+  }
+
+  h1 {
+    font-size: 16pt;
+    text-align: center;
+    color: #0f4c75;
+    margin-bottom: 2px;
+  }
+  .subtitle {
+    text-align: center;
+    font-size: 9.5pt;
+    color: #555;
+    margin-bottom: 6px;
+  }
+
+  .section {
+    border-radius: 5px;
+    padding: 5px 8px;
+    margin-bottom: 6px;
+  }
+  .section h2 {
+    font-size: 12.5pt;
+    margin-bottom: 3px;
+    padding-bottom: 2px;
+    border-bottom: 1.5px solid rgba(0,0,0,0.25);
+  }
+
+  /* צבעי סקציות */
+  .s-stories    { background: #e3f2fd; border: 1.5px solid #1976d2; }
+  .s-stories h2 { color: #0d47a1; }
+  .s-storiesqa    { background: #e8f5e9; border: 1.5px solid #388e3c; }
+  .s-storiesqa h2 { color: #1b5e20; }
+  .s-about    { background: #fff3e0; border: 1.5px solid #f57c00; }
+  .s-about h2 { color: #e65100; }
+  .s-aboutqa    { background: #f3e5f5; border: 1.5px solid #8e24aa; }
+  .s-aboutqa h2 { color: #4a148c; }
+  .s-warn    { background: #ffebee; border: 1.5px solid #d32f2f; }
+  .s-warn h2 { color: #b71c1c; }
+
+  ul { list-style: none; }
+  .section li {
+    font-size: 10.5pt;
+    line-height: 1.5;
+    padding: 1px 0;
+  }
+  .s-stories li b { color: #0d47a1; }
+  .s-about li b { color: #e65100; }
+
+  code {
+    font-family: "Consolas", monospace;
+    background: rgba(0,0,0,0.08);
+    padding: 0 3px;
+    border-radius: 3px;
+    font-size: 9.5pt;
+  }
+
+  table { width: 100%; border-collapse: collapse; }
+  td { border: 1px solid #999; padding: 3px 6px; text-align: right; vertical-align: top; font-size: 10pt; }
+  .s-storiesqa td:first-child,
+  .s-aboutqa td:first-child { font-weight: bold; width: 36%; }
+  .s-storiesqa td:first-child { color: #1b5e20; }
+  .s-aboutqa td:first-child { color: #4a148c; }
+
+  .s-warn li {
+    font-size: 10.5pt;
+    color: #b71c1c;
+    font-weight: bold;
+    line-height: 1.5;
+  }
+
+  @media print {
+    @page { size: A4 portrait; margin: 0; }
+    body { background: #fff; }
+    .page { margin: 0; width: auto; min-height: auto; padding: 8mm; }
+    .section { border: 1.5px solid #000 !important; background: #fff !important; }
+    .section h2 { color: #000 !important; border-bottom: 1.5px solid #000; }
+    .section li b, .s-storiesqa td, .s-aboutqa td, code { color: #000 !important; }
+    .s-warn li { color: #000 !important; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>WalkMe — דף עזר: סיפורי הצלחה + אודות</h1>
+  <div class="subtitle">שאלות טכניות צפויות ותשובות · רומי</div>
+
+  <!-- סיפורי הצלחה - טכני -->
+  <div class="section s-stories">
+    <h2>📖 סיפורי הצלחה — איך זה עובד טכנית</h2>
+    <ul>
+      <li><b>מבנה:</b> 6 כרטיסי סיפור ב-grid של Bootstrap (<code>col-lg-4 col-md-6 col-sm-12</code>) — 3 בשורה במחשב, 2 בטאבלט, 1 בנייד.</li>
+      <li><b>סינון לפי קטגוריה:</b> לכל כפתור <code>data-filter</code>, לכל כרטיס <code>data-category</code>. בלחיצה — משווים ביניהם ומציגים/מסתירים עם <code>.show()</code> / <code>.hide()</code>.</li>
+      <li><b>5 קטגוריות:</b> הכל / אימוץ / שיקום / חינוך / חברות. הכפתור הנבחר מקבל <code>class="active"</code>.</li>
+      <li><b>מונה:</b> <code>$(".story-tile:visible").length</code> סופר כמה סיפורים גלויים ומעדכן את <code>#storiesCounter</code>.</li>
+      <li><b>פתיחת סיפור:</b> לחיצה על כרטיס ← קוראים <code>data-story</code> ← שולפים מאובייקט <code>stories</code> ב-JS ← <code>.text()</code> לכותרת ולתוכן ← <code>slideDown</code> + גלילה לפאנל.</li>
+      <li><b>סגירה:</b> כפתור "סגור" ← <code>slideUp</code> והסרת ההדגשה מהכרטיס.</li>
+    </ul>
+  </div>
+
+  <!-- שאלות סיפורי הצלחה -->
+  <div class="section s-storiesqa">
+    <h2>❓ שאלות צפויות — סיפורי הצלחה</h2>
+    <table>
+      <tr><td>איך הסינון עובד בלי לרענן דף?</td><td>jQuery משווה את data-filter של הכפתור ל-data-category של הכרטיס, ומסתיר/מציג ב-DOM — הכל בצד לקוח.</td></tr>
+      <tr><td>למה <code>.parent()</code> בסינון?</td><td>כל כרטיס יושב בתוך עמודת Bootstrap (div col). מסתירים את העמודה כדי שה-grid לא יישבר.</td></tr>
+      <tr><td>למה <code>.text()</code> ולא <code>.html()</code>?</td><td>text() מכניס טקסט בלבד — בטוח יותר, מונע הרצת קוד/HTML לא רצוי.</td></tr>
+      <tr><td>מאיפה מגיע תוכן הסיפורים?</td><td>מאובייקט JavaScript קבוע בקובץ stories.js — לא ממסד נתונים.</td></tr>
+      <tr><td>איך עובד המונה?</td><td>סופר את הכרטיסים עם הסלקטור <code>:visible</code> ומציג את המספר אחרי כל סינון.</td></tr>
+    </table>
+  </div>
+
+  <!-- אודות - טכני -->
+  <div class="section s-about">
+    <h2>🏢 אודות — איך זה עובד טכנית</h2>
+    <ul>
+      <li><b>סקציות העמוד:</b> Hero, הסיפור שלנו, הערכים, הצוות, צור קשר + מפה, קריאה לפעולה — בנויות עם grid של Bootstrap.</li>
+      <li><b>כרטיסי צוות:</b> פרטי כל איש צוות מאוחסנים ב-<code>data-name</code>, <code>data-role</code>, <code>data-bio</code> בתוך ה-HTML.</li>
+      <li><b>פתיחת ביוגרפיה:</b> לחיצה ← קוראים את ה-<code>data-*</code> עם <code>.data()</code> ← כותבים לפאנל עם <code>.html()</code> (כי יש <code>&lt;strong&gt;</code> ו-<code>&lt;br&gt;</code>) ← <code>slideDown</code>.</li>
+      <li><b>Toggle:</b> לחיצה שנייה על אותו כרטיס סוגרת את הפאנל.</li>
+      <li><b>נגישות:</b> תמיכה במקלדת — אירוע <code>keypress</code>, מקש Enter (<code>which === 13</code>); <code>tabindex="0"</code>, <code>role="button"</code>, <code>aria-label</code>, <code>aria-live="polite"</code>, ו-skip-link.</li>
+      <li><b>אפקט fade-in:</b> בגלילה משווים את <code>offset().top</code> של אלמנט לגובה החלון, ומוסיפים <code>class="visible"</code>.</li>
+      <li><b>מפה:</b> Google Maps משובץ ב-<code>&lt;iframe&gt;</code> עם <code>loading="lazy"</code> (טעינה רק כשמגיעים אליו).</li>
+    </ul>
+  </div>
+
+  <!-- שאלות אודות -->
+  <div class="section s-aboutqa">
+    <h2>❓ שאלות צפויות — אודות</h2>
+    <table>
+      <tr><td>מה זה data attributes?</td><td>תכונות <code>data-*</code> מותאמות אישית ב-HTML לאחסון מידע. קוראים אותן ב-jQuery עם <code>.data()</code>.</td></tr>
+      <tr><td>למה כאן <code>.html()</code> ובסיפורים <code>.text()</code>?</td><td>בביוגרפיה מזריקים תגיות (strong, br) לעיצוב, לכן צריך html(). התוכן קבוע ושלי — לכן בטוח.</td></tr>
+      <tr><td>איך תמכת בנגישות?</td><td>ניווט במקלדת (Enter), role ו-aria-label לקוראי מסך, aria-live לפאנל, ו-skip-link לדילוג לתוכן.</td></tr>
+      <tr><td>איך עובד ה-fade-in בגלילה?</td><td>אירוע scroll בודק אם האלמנט נכנס לתוך המסך, ומוסיף class שמפעיל אנימציית CSS.</td></tr>
+      <tr><td>למה <code>loading="lazy"</code> במפה?</td><td>ה-iframe נטען רק כשגוללים אליו — משפר את מהירות טעינת הדף.</td></tr>
+      <tr><td>למה Bootstrap לפריסה?</td><td>מערכת grid ו-breakpoints מוכנים לרספונסיביות, וגרסת RTL לתמיכה בעברית.</td></tr>
+    </table>
+  </div>
+
+  <!-- אזהרות -->
+  <div class="section s-warn">
+    <h2>⚠️ נקודות לשים לב</h2>
+    <ul>
+      <li>⚠️ הבדל מרכזי: בסיפורים משתמשים ב-<b>.text()</b>, באודות ב-<b>.html()</b> — דעי להסביר למה (תגיות עיצוב מול טקסט בלבד).</li>
+      <li>⚠️ שני העמודים — כל הנתונים בצד לקוח (JS / data attributes), ללא מסד נתונים.</li>
+      <li>⚠️ אם נשאלת על נגישות — זה החוזק של עמוד "אודות": מקלדת + ARIA.</li>
+    </ul>
+  </div>
+
+</div>
+</body>
+</html>
